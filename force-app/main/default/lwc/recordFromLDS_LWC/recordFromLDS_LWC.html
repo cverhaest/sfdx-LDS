@@ -1,0 +1,21 @@
+<template>
+    <lightning-card variant={cardVariant} title={cardTitle} icon-name={cardIconName}>  
+        <lightning-button-icon icon-name="utility:refresh" variant="border-filled" onclick={handleRefresh} alternative-text="Refresh" slot="actions"></lightning-button-icon>
+        <div class="slds-m-left_x-small slds-m-right_small slds-grid">
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-text-heading_large slds-theme_shade"><span>{open_Opportunities}</span></div>
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-text-heading_large slds-theme_shade" ><span><lightning-formatted-number value={open_Opportunities_Value} format-style="currency" currency-display-as="code"></lightning-formatted-number></span></div>
+        </div>    
+        <div class="slds-m-left_x-small slds-m-right_small slds-grid">
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-form-element__label"><span>{open_Opportunities_Label}</span></div>
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-form-element__label"><span>{open_Opportunities_Value_Label}</span></div>
+        </div>
+        <div class="slds-m-left_x-small slds-m-right_small slds-grid">
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-text-heading_large slds-theme_shade"><span>{closed_Won_Opportunities}</span></div>
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-text-heading_large slds-theme_shade"><span>{closed_Lost_Opportunities}</span></div>
+        </div>    
+        <div class="slds-m-left_x-small slds-m-right_small slds-grid">
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-form-element__label"><span>{closed_Won_Opportunities_Label}</span></div>
+            <div class="slds-m-right_xxx-small slds-col slds-size_1-of-2 slds-text-align_center slds-form-element__label"><span>{closed_Lost_Opportunities_Label}</span></div>
+        </div>        
+    </lightning-card>
+</template>

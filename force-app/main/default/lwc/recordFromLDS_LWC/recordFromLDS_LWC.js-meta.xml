@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Lightning Data Service Lightning Web Component (LWC) - @CVER</masterLabel>
+    <description>This is a &quot;Lightning Data Service&quot; LWC demo component.</description>
+
+    <targets>
+        <!-- Configure a Component for Lightning App Builder --><!-- https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.use_config_for_app_builder -->  
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="cardVariant" type="String" label="Card Variant" description="Variant" datasource="base,narrow" default="base"/>
+            <property name="cardTitle" type="String" label="Card Title" description="Title of the Card" default="{!$Label.recordFromLDS_CardTitle}"/>
+            <property name="cardIconName" type="String" label="Card SLDS Icon Name" description="Name of the SLDS Icon" default="utility:announcement"/>
+            <property name="debug" type="Boolean" label="Allow console.log()" default="false"/>
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="cardVariant" type="String" label="Card Variant" description="Variant" datasource="base,narrow" default="base"/>
+            <property name="cardTitle" type="String" label="Card Title" description="Title of the Card" default="{!$Label.recordFromLDS_CardTitle}"/>
+            <property name="cardIconName" type="String" label="Card SLDS Icon Name" description="Name of the SLDS Icon" default="utility:announcement"/>
+            <property name="debug" type="Boolean" label="Allow console.log()" default="false"/>
+            <property name="recordId" default="{!recordId}" type="String" label="Record ID" description="Automatically bind the page's record id to the component variable"/>
+        </targetConfig>
+    </targetConfigs>     
+</LightningComponentBundle>
